@@ -76,7 +76,7 @@ func main() {
 
 	owner := os.Getenv("GITHUB_ACTOR")
 	repo := os.Getenv("GITHUB_REPOSITORY")
-	repo = strings.Replace(repo, owner+ "/", "", 1)
+	//repo = strings.Replace(repo, owner+ "/", "", 1)
 	l, err := labeler.New(owner, repo, eventName, id, &data)
 	if err != nil {
 		log.Fatalf("Could not construct a labeler %s", err)
